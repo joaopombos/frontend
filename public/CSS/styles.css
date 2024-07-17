@@ -1,0 +1,79 @@
+.estrelas {
+    color: #FFD600;
+}
+
+
+.card-title,
+.estrelas,
+.card-text {
+    margin-bottom: 0.5rem;
+    /* Adjust the margin as needed */
+}
+
+.loginpage {
+    background-image: url('images/fundos/logo.svg'), url('images/fundos/fundo\ branco.jpg');
+    background-position: top left, right;
+    /* Define a posição das duas imagens */
+    background-repeat: no-repeat, no-repeat;
+    /* Evita que as imagens se repitam */
+    background-size: 30%, 70%;
+    /* Ajusta o tamanho das imagens de fundo */
+    background-position: -150px -250px, 600px -125px;
+    /* Ajusta a posição das imagens */
+}
+
+
+.signuppage {
+    background-image: url('images/fundos/logo.svg'), url('images/fundos/fundo\ preto.jpg');
+    background-position: top right, left;
+    /* Define a posição das duas imagens */
+    background-repeat: no-repeat, no-repeat;
+    /* Evita que as imagens se repitam */
+    background-size: 30%, 70%;
+    /* Ajusta o tamanho das imagens de fundo */
+    background-position: 1200px -250px, -300px 50px;
+    /* Ajusta a posição das imagens */
+}
+
+tr {
+    border-bottom: 1px solid white !important;
+}
+
+
+hr {
+    border-top: 1px solid #ccc;
+    width: 85%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black;
+    display: inline-block;
+    position:  absolute;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    filter: invert(100%);
+    display: inline-block;
+    position: absolute;
+}
+.heroi {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('images/fundos/fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-hr {
+    width: 90%; /* Defina a largura desejada */
+    margin: 0 auto; /* Centraliza o elemento horizontalmente */
+    border: 0.5px solid black; /* Customize a borda conforme necessário */
+    margin-top: 7%;
+}
+
