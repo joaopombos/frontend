@@ -3,6 +3,8 @@ import axios from 'axios';  // Importar o axios corretamente
 import { useNavigate } from 'react-router-dom';  // Importar o useNavigate para redirecionamento
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../CSS/ware.css';
+import { useNavigate, Link } from 'react-router-dom';
+
 
 
 export default function EditComponent() {
@@ -47,10 +49,10 @@ export default function EditComponent() {
           <img class="warelogo navbar-brand " src="/images/Logos/logo.png" alt="Ware Logo" />
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link text-white" href="/">Home</a>
+              <Link class="nav-link text-white" to="/">Home</Link>
             </li>
           </ul>
-          <a href="/login" class="btn btn-primary">Iniciar Sessão</a>
+          <Link to="/login" class="btn btn-primary">Iniciar Sessão</Link>
         </div>
       </nav>
       {/* FIM MENU BAR */}

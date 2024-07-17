@@ -65,24 +65,24 @@ const MySoftwares = () => {
             {/* NAVBAR */}
             <nav className="navbar navbar-expand-lg bg-dark">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="/signup/comprador">
+                    <Link className="navbar-brand" to="/signup/comprador">
                         <img className="warelogo" src="/images/Logos/logo.png" alt="Ware Logo" />
-                    </a>
+                    </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
-                            <a className="nav-link text-white" href="/shop">Explorar</a>
-                            <a className="nav-link active text-white" aria-current="page" href="/library">Gestão</a>
+                            <Link className="nav-link text-white" to="/shop">Explorar</Link>
+                            <Link className="nav-link active text-white" aria-current="page" to="/library">Gestão</Link>
                         </div>
                     </div>
                     <form className="d-flex me-3" role="search">
                         <input className="navform form-control me-2" type="search" placeholder="Procurar" aria-label="Search" />
                         <button className="btn btn-outline-light" type="submit">Procurar</button>
                     </form>
-                    <a href="/" className="btn btn-primary">Terminar Sessão</a>
+                    <Link to="/" className="btn btn-primary">Terminar Sessão</Link>
                 </div>
             </nav>
             {/* FIM NAVBAR */}

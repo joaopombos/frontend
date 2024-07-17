@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { Modal, Button, Form } from 'react-bootstrap';
 import '../CSS/ware.css';
+import { useNavigate, Link } from 'react-router-dom';
 
 
 const License = () => {
@@ -14,6 +15,7 @@ const License = () => {
     const [showUpdateModal, setShowUpdateModal] = useState(false);
     const [currentLicense, setCurrentLicense] = useState(null);
     const [newNomepc, setNewNomepc] = useState('');
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchSoftwareLicenses = async () => {
@@ -26,8 +28,7 @@ const License = () => {
             } catch (error) {
                 console.error('Error fetching software licenses:', error);
                 if (error.response && error.response.status === 401) {
-             
-                    window.location.href = '/login';
+                    navigate('/login');
                 }
             }
         };
@@ -96,20 +97,20 @@ const License = () => {
                             <img class="warelogo navbar-brand " src="/images/Logos/logo.png" alt="Ware Logo" />
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                    <a class="nav-link text-white" href="/signup/comprador">Home</a>
+                                    <Link class="nav-link text-white" to="/signup/comprador">Home</Link>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" href="/shop">Explorar</a>
+                                    <Link class="nav-link text-white" to="/shop">Explorar</Link>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active text-white" aria-current="page" href="/library">Gestão</a>
+                                    <Link class="nav-link active text-white" aria-current="page" to="/library">Gestão</Link>
                                 </li>
                             </ul>
                             <form class="d-flex" role="search">
                                 <input class="navform form-control me-2" type="search" placeholder="Procurar" aria-label="Search" />
                                 <button class="btn btn-outline-light mx-2" type="submit">Procurar</button>
                             </form>
-                            <a href="/" class="btn btn-primary">Terminar Sessão</a>
+                            <Link to="/" class="btn btn-primary">Terminar Sessão</Link>
                         </div>
                     </nav>
             {/* FIM NAVBAR */}
