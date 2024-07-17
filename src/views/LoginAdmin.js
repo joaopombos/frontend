@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';  // Importar o axios corretamente
-import { useNavigate } from 'react-router-dom';  // Importar o useNavigate para redirecionamento
+import { useNavigate, Link } from 'react-router-dom';  // Importar o useNavigate para redirecionamento
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../CSS/ware.css';
-import { useNavigate, Link } from 'react-router-dom';
 
 
 

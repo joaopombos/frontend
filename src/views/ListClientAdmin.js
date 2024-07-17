@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../CSS/ware.css';
-import { useNavigate, Link } from 'react-router-dom';
 
 
 const ListClientAdmin = () => {
