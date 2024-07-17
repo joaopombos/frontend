@@ -2,6 +2,8 @@ import React from 'react';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../CSS/ware.css';
+import { useNavigate, Link } from 'react-router-dom';
+
 
 export default function EditComponent() {
 
@@ -19,20 +21,20 @@ export default function EditComponent() {
                     <img class="warelogo navbar-brand " src="/images/Logos/logo.png" alt="Ware Logo" />
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="/signup/comprador">Home</a>
+                            <Link class="nav-link text-white" to="/signup/comprador">Home</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="/shop">Explorar</a>
+                            <Link class="nav-link text-white" to="/shop">Explorar</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="/library">Gestão</a>
+                            <Link class="nav-link active text-white" aria-current="page" to="/library">Gestão</Link>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
                         <input class="navform form-control me-2" type="search" placeholder="Procurar" aria-label="Search" />
                         <button class="btn btn-outline-light mx-2" type="submit">Procurar</button>
                     </form>
-                    <a href="/" class="btn btn-primary">Terminar Sessão</a>
+                    <Link to="/" class="btn btn-primary">Terminar Sessão</Link>
                 </div>
             </nav>
             {/* FIM NAVBAR */}
@@ -53,7 +55,7 @@ export default function EditComponent() {
                                         <p class="estrelas mb-2">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
                                         <p class="cardcat card-text mb-2">Design</p>
                                         <p class="card-text">De ilustrações a logotipos, todas as ferramentas necessárias para seus projetos de design gráfico.</p>
-                                        <a href="/shop/:idproduto/" class="btn btn-dark w-100">Saber mais</a>
+                                        <Link to="/shop/:idproduto/" class="btn btn-dark w-100">Saber mais</Link>
                                     </div>
                                 </div>
                             </div>
@@ -65,7 +67,7 @@ export default function EditComponent() {
                                         <p class="estrelas mb-2">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
                                         <p class="cardcat card-text mb-2">Edição de Vídeo</p>
                                         <p class="card-text">A ferramenta mais poderosa de Hollywood para edição profissional em pós-edição de áudio!</p>
-                                        <a href="/shop/:idproduto/" class="btn btn-dark w-100">Saber mais</a>
+                                        <Link to="/shop/:idproduto/" class="btn btn-dark w-100">Saber mais</Link>
                                     </div>
                                 </div>
                             </div>
@@ -77,7 +79,7 @@ export default function EditComponent() {
                                         <p class="estrelas mb-2">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
                                         <p class="cardcat card-text mb-2">Modelagem 3D</p>
                                         <p class="card-text">Dê vida aos seus conceitos mais loucos e reimagine o que é possível fazer, tudo num software.</p>
-                                        <a href="/shop/:idproduto/" class="btn btn-dark w-100">Saber mais</a>
+                                        <Link to="/shop/:idproduto/" class="btn btn-dark w-100">Saber mais</Link>
                                     </div>
                                 </div>
                             </div>
@@ -93,7 +95,7 @@ export default function EditComponent() {
                                         <p class="estrelas mb-2">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
                                         <p class="cardcat card-text mb-2">Produtividade</p>
                                         <p class="card-text">Uma plataforma para conexões humanas ilimitadas. Conecte-se com amigos e colegas através de videoconferências.</p>
-                                        <a href="/shop/:idproduto/" class="btn btn-dark w-100">Saber mais</a>
+                                        <Link to="/shop/:idproduto/" class="btn btn-dark w-100">Saber mais</Link>
                                     </div>
                                 </div>
                             </div>
@@ -105,7 +107,7 @@ export default function EditComponent() {
                                         <p class="estrelas mb-2">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
                                         <p class="cardcat card-text mb-2">Planilhas</p>
                                         <p class="card-text">A ferramenta essencial para criar, organizar e analisar dados com precisão. Domine seus dados com facilidade.</p>
-                                        <a href="/shop/:idproduto/" class="btn btn-dark w-100">Saber mais</a>
+                                        <Link to="/shop/:idproduto/" class="btn btn-dark w-100">Saber mais</Link>
                                     </div>
                                 </div>
                             </div>
@@ -117,7 +119,7 @@ export default function EditComponent() {
                                         <p class="estrelas mb-2">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
                                         <p class="cardcat card-text mb-2">Desenho Técnico</p>
                                         <p class="card-text">A ferramenta de design assistido por computador mais poderosa do mercado, com precisão de engenharia.</p>
-                                        <a href="/shop/:idproduto/" class="btn btn-dark w-100">Saber mais</a>
+                                        <Link to="/shop/:idproduto/" class="btn btn-dark w-100">Saber mais</Link>
                                     </div>
                                 </div>
                             </div>
@@ -154,7 +156,7 @@ export default function EditComponent() {
                                                 <p class="card-text">Produtividade</p>
                                                 <h5 class="card-title">Microsoft Excel</h5>
                                             </div>
-                                            <a href="/shop/:idproduto/" class="btnup btn btn-dark btn-sm">Saber mais</a>
+                                            <Link to="/shop/:idproduto/" class="btnup btn btn-dark btn-sm">Saber mais</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -168,7 +170,7 @@ export default function EditComponent() {
                                                 <p class="card-text">Comunicação</p>
                                                 <h5 class="card-title">Asana</h5>
                                             </div>
-                                            <a href="/shop/:idproduto/" class="btnup btn btn-dark btn-sm">Saber mais</a>
+                                            <Link to="/shop/:idproduto/" class="btnup btn btn-dark btn-sm">Saber mais</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -184,7 +186,7 @@ export default function EditComponent() {
                                                 <p class="card-text">Produtivade</p>
                                                 <h5 class="card-title">DropBox</h5>
                                             </div>
-                                            <a href="/shop/:idproduto/" class="btnup btn btn-dark btn-sm">Saber mais</a>
+                                            <Link to="/shop/:idproduto/" class="btnup btn btn-dark btn-sm">Saber mais</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -198,7 +200,7 @@ export default function EditComponent() {
                                                 <p class="card-text">Comunicação</p>
                                                 <h5 class="card-title">Miro</h5>
                                             </div>
-                                            <a href="/shop/:idproduto/" class="btnup btn btn-dark btn-sm">Saber mais</a>
+                                            <Link to="/shop/:idproduto/" class="btnup btn btn-dark btn-sm">Saber mais</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -218,7 +220,7 @@ export default function EditComponent() {
                                                 <p class="card-text">Produtivade</p>
                                                 <h5 class="card-title">Notion</h5>
                                             </div>
-                                            <a href="/shop/:idproduto/" class="btnup btn btn-dark btn-sm">Saber mais</a>
+                                            <Link to="/shop/:idproduto/" class="btnup btn btn-dark btn-sm">Saber mais</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -232,7 +234,7 @@ export default function EditComponent() {
                                                 <p class="card-text">Vídeo</p>
                                                 <h5 class="card-title">Final Cut Pro</h5>
                                             </div>
-                                            <a href="/shop/:idproduto/" class="btnup btn btn-dark btn-sm">Saber mais</a>
+                                            <Link to="/shop/:idproduto/" class="btnup btn btn-dark btn-sm">Saber mais</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -248,7 +250,7 @@ export default function EditComponent() {
                                                 <p class="card-text">Produtividade</p>
                                                 <h5 class="card-title">Office 365</h5>
                                             </div>
-                                            <a href="/shop/:idproduto/" class="btnup btn btn-dark btn-sm">Saber mais</a>
+                                            <Link to="/shop/:idproduto/" class="btnup btn btn-dark btn-sm">Saber mais</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -262,7 +264,7 @@ export default function EditComponent() {
                                                 <p class="card-text">Produtividade</p>
                                                 <h5 class="card-title">Slack</h5>
                                             </div>
-                                            <a href="/shop/:idproduto/" class="btnup btn btn-dark btn-sm">Saber mais</a>
+                                            <Link to="/shop/:idproduto/" class="btnup btn btn-dark btn-sm">Saber mais</Link>
                                         </div>
                                     </div>
                                 </div>

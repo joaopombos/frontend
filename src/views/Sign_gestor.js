@@ -75,7 +75,7 @@ export default function Sign_gestor() {
                             <div class="botaoselect pt-1 mb-4">
                                 <button class="btn btn-info btn-lg btn-dark" type='submit'>Enviar código</button>
                             </div>
-                            <p>Já tem conta? <a href="/login" class="link-info">Clique aqui.</a></p>
+                            <p>Já tem conta? <Link to="/login" class="link-info">Clique aqui.</Link></p>
                         </form>
                     </div>
                 </div>

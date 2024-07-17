@@ -102,7 +102,7 @@ export default function Sign_cGestor() {
                             <div className="botaoselect pt-1 mb-4">
                                 <button className="btn btn-info btn-lg btn-dark" type="submit">Enviar código</button>
                             </div>
-                            <p>Já tem conta? <a href="/login" className="link-info">Clique aqui.</a></p>
+                            <p>Já tem conta? <Link to="/login" className="link-info">Clique aqui.</Link></p>
                         </form>
                         <br></br><br></br>
                     </div>
