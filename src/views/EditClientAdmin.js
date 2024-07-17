@@ -25,7 +25,7 @@ const EditClientAdmin = () => {
         const fetchClient = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.get(`postgresql://warebd_user:MkoQDynXsw6PcSzyF1hHhi4aBPTZWUeh@dpg-cpup1qqj1k6c738f3fbg-a/warebd/admin/clientes/${nif}`, {
+                const response = await axios.get(`postgresql://basededados_mqvg_user:1qkb2SBgZDFSwZnR5dI0fRkNKbuvWn5s@dpg-cqbstdogph6c73c70jb0-a/basededados_mqvg/admin/clientes/${nif}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -42,7 +42,7 @@ const EditClientAdmin = () => {
         const fetchCompanyNifs = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.get('postgresql://warebd_user:MkoQDynXsw6PcSzyF1hHhi4aBPTZWUeh@dpg-cpup1qqj1k6c738f3fbg-a/warebd/admin/empresas', {
+                const response = await axios.get('postgresql://basededados_mqvg_user:1qkb2SBgZDFSwZnR5dI0fRkNKbuvWn5s@dpg-cqbstdogph6c73c70jb0-a/basededados_mqvg/admin/empresas', {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -81,7 +81,7 @@ const EditClientAdmin = () => {
                 withCredentials: true,
             };
 
-            await axios.put(`http://localhost:3000/admin/clientes/${nif}`, client, config);
+            await axios.put(`postgresql://basededados_mqvg_user:1qkb2SBgZDFSwZnR5dI0fRkNKbuvWn5s@dpg-cqbstdogph6c73c70jb0-a/basededados_mqvg/admin/clientes/${nif}`, client, config);
 
             window.alert('Client updated successfully!');
             navigate('/list/admin/clientes');

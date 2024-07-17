@@ -21,7 +21,7 @@ const SoftwareUpdate = () => {
         const fetchSoftware = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.get(`postgresql://warebd_user:MkoQDynXsw6PcSzyF1hHhi4aBPTZWUeh@dpg-cpup1qqj1k6c738f3fbg-a/warebd/edit/admin/${idproduto}`, {
+                const response = await axios.get(`postgresql://basededados_mqvg_user:1qkb2SBgZDFSwZnR5dI0fRkNKbuvWn5s@dpg-cqbstdogph6c73c70jb0-a/basededados_mqvg/edit/admin/${idproduto}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -85,7 +85,7 @@ const SoftwareUpdate = () => {
                 withCredentials: true,
             };
 
-            await axios.put(`http://localhost:3000/update/admin/${idproduto}`, updateData, config);
+            await axios.put(`postgresql://basededados_mqvg_user:1qkb2SBgZDFSwZnR5dI0fRkNKbuvWn5s@dpg-cqbstdogph6c73c70jb0-a/basededados_mqvg/update/admin/${idproduto}`, updateData, config);
 
             window.alert('Software updated successfully!');
             navigate('/list/admin');

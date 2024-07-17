@@ -10,7 +10,7 @@ const Orcamentos = ({ token }) => {
   useEffect(() => {
     const fetchBudgets = async () => {
       try {
-        const response = await axios.get('postgresql://warebd_user:MkoQDynXsw6PcSzyF1hHhi4aBPTZWUeh@dpg-cpup1qqj1k6c738f3fbg-a/warebd/budget/admin', {
+        const response = await axios.get('postgresql://basededados_mqvg_user:1qkb2SBgZDFSwZnR5dI0fRkNKbuvWn5s@dpg-cqbstdogph6c73c70jb0-a/basededados_mqvg/budget/admin', {
           headers: {
             Authorization: `Bearer ${token}`
           },
@@ -46,7 +46,7 @@ const Orcamentos = ({ token }) => {
     const resposta = prompt("Digite sua resposta:");
     if (resposta) {
       try {
-        await axios.post(`postgresql://warebd_user:MkoQDynXsw6PcSzyF1hHhi4aBPTZWUeh@dpg-cpup1qqj1k6c738f3fbg-a/warebd/budget/respond/${id}`, { resposta }, {
+        await axios.post(`postgresql://basededados_mqvg_user:1qkb2SBgZDFSwZnR5dI0fRkNKbuvWn5s@dpg-cqbstdogph6c73c70jb0-a/basededados_mqvg/budget/respond/${id}`, { resposta }, {
           headers: {
             Authorization: `Bearer ${token}`
           },

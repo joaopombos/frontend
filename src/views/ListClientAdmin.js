@@ -13,7 +13,7 @@ const ListClientAdmin = () => {
     const fetchClients = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('postgresql://warebd_user:MkoQDynXsw6PcSzyF1hHhi4aBPTZWUeh@dpg-cpup1qqj1k6c738f3fbg-a/warebd/admin/clientes', {
+        const response = await axios.get('postgresql://basededados_mqvg_user:1qkb2SBgZDFSwZnR5dI0fRkNKbuvWn5s@dpg-cqbstdogph6c73c70jb0-a/basededados_mqvg/admin/clientes', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -42,7 +42,7 @@ const ListClientAdmin = () => {
   const handleDelete = async (nif) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`postgresql://warebd_user:MkoQDynXsw6PcSzyF1hHhi4aBPTZWUeh@dpg-cpup1qqj1k6c738f3fbg-a/warebd/admin/clientes/${nif}`, {
+      await axios.delete(`postgresql://basededados_mqvg_user:1qkb2SBgZDFSwZnR5dI0fRkNKbuvWn5s@dpg-cqbstdogph6c73c70jb0-a/basededados_mqvg/admin/clientes/${nif}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

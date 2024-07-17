@@ -11,7 +11,7 @@ const MySoftwares = () => {
     useEffect(() => {
         const fetchSoftwares = async () => {
             try {
-                const response = await axios.get('postgresql://warebd_user:MkoQDynXsw6PcSzyF1hHhi4aBPTZWUeh@dpg-cpup1qqj1k6c738f3fbg-a/warebd/library', {
+                const response = await axios.get('postgresql://basededados_mqvg_user:1qkb2SBgZDFSwZnR5dI0fRkNKbuvWn5s@dpg-cqbstdogph6c73c70jb0-a/basededados_mqvg/warebd/library', {
                     withCredentials: true
                 });
 
