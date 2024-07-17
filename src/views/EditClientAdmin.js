@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../CSS/ware.css';
+import { useNavigate, Link } from 'react-router-dom';
 
 const EditClientAdmin = () => {
     const { nif } = useParams();
@@ -105,23 +106,23 @@ const EditClientAdmin = () => {
         </div>
         <ul class="components">
           <li>
-            <a href="/add/admin"><i class="fas fa-plus"></i> Adicionar Software/Addon</a>
+            <Link to="/add/admin"><i class="fas fa-plus"></i> Adicionar Software/Addon</Link>
           </li>
           <li >
-            <a href="/list/admin"><i class="fas fa-list"></i> Listar Softwares/Addons</a>
+            <Link to="/list/admin"><i class="fas fa-list"></i> Listar Softwares/Addons</Link>
           </li>
           <li class="active">
-            <a href="/list/admin/clientes"><i class="fas fa-list"></i> Listar Clientes</a>
+            <Link to="/list/admin/clientes"><i class="fas fa-list"></i> Listar Clientes</Link>
           </li>
           <li>
-            <a href="/budget/admin"><i class="fas fa-file-invoice-dollar"></i> Orçamentos</a>
+            <Link to="/budget/admin"><i class="fas fa-file-invoice-dollar"></i> Orçamentos</Link>
           </li>
           <li>
-            <a href="/metrics/admin"><i class="fas fa-chart-line"></i> Métricas de vendas</a>
+            <Link to="/metrics/admin"><i class="fas fa-chart-line"></i> Métricas de vendas</Link>
           </li>
         </ul>
         <div class="logout-button">
-          <a href="/" class="btn btn-primary">Terminar Sessão</a>
+          <Link to="/" class="btn btn-primary">Terminar Sessão</Link>
         </div>
       </div>
 
