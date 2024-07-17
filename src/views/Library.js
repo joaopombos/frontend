@@ -63,28 +63,27 @@ const MySoftwares = () => {
     return (
         <div className="d-flex flex-column min-vh-100">
             {/* NAVBAR */}
-            <nav className="navbar navbar-expand-lg bg-dark">
-                <div className="container-fluid">
-                    <Link className="navbar-brand" to="/signup/comprador">
-                        <img className="warelogo" src="/images/Logos/logo.png" alt="Ware Logo" />
-                    </Link>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div className="navbar-nav">
-                            <Link className="nav-link text-white" to="/shop">Explorar</Link>
-                            <Link className="nav-link active text-white" aria-current="page" to="/library">Gestão</Link>
+            <nav class="navbar navbar-expand-lg bg-dark">
+                        <div class="container-fluid">
+                            <img class="warelogo navbar-brand " src="/images/Logos/logo.png" alt="Ware Logo" />
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                    <Link class="nav-link text-white" to="/signup/comprador">Home</Link>
+                                </li>
+                                <li class="nav-item">
+                                    <Link class="nav-link text-white" to="/shop">Explorar</Link>
+                                </li>
+                                <li class="nav-item">
+                                    <Link class="nav-link active text-white" aria-current="page" to="/library">Gestão</Link>
+                                </li>
+                            </ul>
+                            <form class="d-flex" role="search">
+                                <input class="navform form-control me-2" type="search" placeholder="Procurar" aria-label="Search" />
+                                <button class="btn btn-outline-light mx-2" type="submit">Procurar</button>
+                            </form>
+                            <Link to="/" class="btn btn-primary">Terminar Sessão</Link>
                         </div>
-                    </div>
-                    <form className="d-flex me-3" role="search">
-                        <input className="navform form-control me-2" type="search" placeholder="Procurar" aria-label="Search" />
-                        <button className="btn btn-outline-light" type="submit">Procurar</button>
-                    </form>
-                    <Link to="/" className="btn btn-primary">Terminar Sessão</Link>
-                </div>
-            </nav>
+                    </nav>
             {/* FIM NAVBAR */}
 
             <h1 className="titulo">Os meus softwares</h1>
