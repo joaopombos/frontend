@@ -14,7 +14,7 @@ const ListAdmin = () => {
     const fetchSoftwares = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`postgresql://basededados_mqvg_user:1qkb2SBgZDFSwZnR5dI0fRkNKbuvWn5s@dpg-cqbstdogph6c73c70jb0-a/basededados_mqvg/list/admin?tipo=${tipoListagem}`, {
+        const response = await axios.get(`https://backend-qbi5.onrender.com/list/admin?tipo=${tipoListagem}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -44,7 +44,7 @@ const ListAdmin = () => {
     try {
         const token = localStorage.getItem('token');
         console.log(`Attempting to delete software with id: ${idproduto}`);
-        await axios.delete(`postgresql://basededados_mqvg_user:1qkb2SBgZDFSwZnR5dI0fRkNKbuvWn5s@dpg-cqbstdogph6c73c70jb0-a/basededados_mqvg/edit/admin/${idproduto}`, {
+        await axios.delete(`https://backend-qbi5.onrender.com/edit/admin/${idproduto}`, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },

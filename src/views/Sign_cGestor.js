@@ -17,7 +17,7 @@ export default function Sign_cGestor() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('postgresql://basededados_mqvg_user:1qkb2SBgZDFSwZnR5dI0fRkNKbuvWn5s@dpg-cqbstdogph6c73c70jb0-a/basededados_mqvg/signin/comprador', {
+            await axios.post('https://backend-qbi5.onrender.com/signin/comprador', {
 
                 email,
                 nome,

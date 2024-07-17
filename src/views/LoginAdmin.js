@@ -15,7 +15,7 @@ export default function EditComponent() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('postgresql://basededados_mqvg_user:1qkb2SBgZDFSwZnR5dI0fRkNKbuvWn5s@dpg-cqbstdogph6c73c70jb0-a/basededados_mqvg/login/admin', { username, password }, {
+      const response = await axios.post('https://backend-qbi5.onrender.com/login/admin', { username, password }, {
         withCredentials: true // Se necessário
       });
       const { token } = response.data;

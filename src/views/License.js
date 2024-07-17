@@ -18,7 +18,7 @@ const License = () => {
     useEffect(() => {
         const fetchSoftwareLicenses = async () => {
             try {
-                const response = await axios.get(`postgresql://basededados_mqvg_user:1qkb2SBgZDFSwZnR5dI0fRkNKbuvWn5s@dpg-cqbstdogph6c73c70jb0-a/basededados_mqvg/license/${chaveproduto}`, {
+                const response = await axios.get(`https://backend-qbi5.onrender.com/license/${chaveproduto}`, {
                     withCredentials: true 
                 });
                 setSoftware(response.data.software);
@@ -48,7 +48,7 @@ const License = () => {
 
     const handleUpdateSubmit = async () => {
         try {
-            const response = await axios.put(`postgresql://basededados_mqvg_user:1qkb2SBgZDFSwZnR5dI0fRkNKbuvWn5s@dpg-cqbstdogph6c73c70jb0-a/basededados_mqvg/license/${chaveproduto}`,
+            const response = await axios.put(`https://backend-qbi5.onrender.com/license/${chaveproduto}`,
                 {
                     idatribuida: currentLicense.idatribuida,
                     nomepc: newNomepc
@@ -64,7 +64,7 @@ const License = () => {
 
     const handleLicenseRemove = async (idatribuida) => {
         try {
-            const response = await axios.put(`postgresql://basededados_mqvg_user:1qkb2SBgZDFSwZnR5dI0fRkNKbuvWn5s@dpg-cqbstdogph6c73c70jb0-a/basededados_mqvg/license/${chaveproduto}`,
+            const response = await axios.put(`https://backend-qbi5.onrender.com/license/${chaveproduto}`,
                 {
                     idatribuida,
                     nomepc: null

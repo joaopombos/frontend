@@ -13,7 +13,7 @@ const ListClientAdmin = () => {
     const fetchClients = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('postgresql://basededados_mqvg_user:1qkb2SBgZDFSwZnR5dI0fRkNKbuvWn5s@dpg-cqbstdogph6c73c70jb0-a/basededados_mqvg/admin/clientes', {
+        const response = await axios.get('https://backend-qbi5.onrender.com/admin/clientes', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -42,7 +42,7 @@ const ListClientAdmin = () => {
   const handleDelete = async (nif) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`postgresql://basededados_mqvg_user:1qkb2SBgZDFSwZnR5dI0fRkNKbuvWn5s@dpg-cqbstdogph6c73c70jb0-a/basededados_mqvg/admin/clientes/${nif}`, {
+      await axios.delete(`https://backend-qbi5.onrender.com/admin/clientes/${nif}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
