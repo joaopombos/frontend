@@ -4,9 +4,12 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import axios from 'axios';
 import '../CSS/ware.css';
+import { useNavigate, Link } from 'react-router-dom';
+
 
 const MySoftwares = () => {
     const [softwares, setSoftwares] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchSoftwares = async () => {
@@ -24,7 +27,7 @@ const MySoftwares = () => {
             } catch (error) {
                 console.error('Erro ao buscar softwares:', error);
                 if (error.response && error.response.status === 401) {
-                    window.location.href = '/login';
+                    navigate('/login');
                 }
             }
         };
@@ -33,7 +36,7 @@ const MySoftwares = () => {
     }, []);
 
     const handleButtonClick = (chaveproduto) => {
-        window.location.href = `/license/${chaveproduto}`;
+        navigate(`/license/${chaveproduto}`);
     };
 
     const renderCard = (software) => (
