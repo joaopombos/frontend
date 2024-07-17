@@ -1,5 +1,6 @@
 import React, { } from "react";
 import '../CSS/ware.css';
+import { useNavigate, Link } from 'react-router-dom';
 
 export default function Sign_tipo() {
     return (
@@ -9,7 +10,7 @@ export default function Sign_tipo() {
                     <img class="warelogo navbar-brand " src="/images/Logos/logo.png" alt="Ware Logo" />
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="/">Home</a>
+                            <Link class="nav-link text-white" to="/">Home</Link>
                         </li>
                     </ul>
                 </div>
@@ -25,7 +26,7 @@ export default function Sign_tipo() {
                                 <li><i class="fas fa-times"></i> Compra de Softwares</li>
                             </ul>
                         </p>
-                        <a href="/signin/gestor" class="botaoselect btn btn-dark">Selecionar</a>
+                        <Link to="/signin/gestor" class="botaoselect btn btn-dark">Selecionar</Link>
                     </div>
                 </div>
                 <div class="tipoconta card text-center mb-3 align-middle">
@@ -39,7 +40,7 @@ export default function Sign_tipo() {
                                 <li><i class="fas fa-check"></i> Compra de Softwares</li>
                             </ul>
                         </p>
-                        <a href="/signin/c_gestor" class="botaoselect btn btn-dark">Selecionar</a>
+                        <Link to="/signin/c_gestor" class="botaoselect btn btn-dark">Selecionar</Link>
                     </div>
                 </div>
             </div>
