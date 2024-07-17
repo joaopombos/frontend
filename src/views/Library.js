@@ -26,9 +26,9 @@ const MySoftwares = () => {
                 setSoftwares(convertedSoftwares);
             } catch (error) {
                 console.error('Erro ao buscar softwares:', error);
-                if (error.response && error.response.status === 401) {
+                /*if (error.response && error.response.status === 401) {
                     navigate('/login');
-                }
+                }*/
             }
         };
 
