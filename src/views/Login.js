@@ -2,13 +2,14 @@ import axios from 'axios';
 import React, { useState } from "react";
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../CSS/ware.css';
-import Cookies from 'js-cookie'; 
+import Cookies from 'js-cookie';
+import { useNavigate, Link } from 'react-router-dom';
 
 export default function EditComponent() {
     const [email, setEmail] = useState('');
     const [codigopessoal, setCodigoPessoal] = useState('');
     const [error, setError] = useState('');
-
+const navigate = useNavigate();
     const handleLogin = async (e) => {
         e.preventDefault();
 
@@ -19,7 +20,7 @@ export default function EditComponent() {
             localStorage.setItem('token', token); 
             Cookies.set('emp_nif', emp_nif, { expires: 1, path: '/' }); 
             console.log('Login successful', token);
-            window.location.href = '/signup/comprador';
+            navigate('/signup/comprador');
         } catch (error) {
             console.error('Login error', error);
             if (error.response) {
@@ -38,7 +39,7 @@ export default function EditComponent() {
                     <img class="warelogo navbar-brand " src="/images/Logos/logo.png" alt="Ware Logo" />
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="/">Home</a>
+                            <Link class="nav-link text-white" to="/">Home</Link>
                         </li>
                     </ul>
                 </div>
@@ -70,8 +71,8 @@ export default function EditComponent() {
                                         <div className="pt-1 mb-4">
                                             <button className="btn btn-info btn-lg btn-dark" type="submit">Login</button>
                                         </div>
-                                        <p className="small mb-5 pb-lg-2"><a className="text-muted" href="/loginAdmin">Tem Conta Admin?</a></p>
-                                        <p>Não tem conta? <a href="/signin/tipo" className="link-info">Crie uma aqui.</a></p>
+                                        <p className="small mb-5 pb-lg-2"><Link className="text-muted" to="/loginAdmin">Tem Conta Admin?</Link></p>
+                                        <p>Não tem conta? <Link to="/signin/tipo" className="link-info">Crie uma aqui.</Link></p>
                                     </form>
                                 </div>
                             </div>
